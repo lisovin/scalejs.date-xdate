@@ -1,0 +1,8 @@
+﻿({
+	mainConfigFile: '../bootstrapper.js',
+    include: 'scalejs.date-xdate',
+    exclude: [
+		'xdate',
+        'scalejs!core'
+    ]
+})
