@@ -6,6 +6,12 @@ define([
 ) {
     'use strict';
 
+    function toDate(date) {
+        var xdate = new XDate(date);
+
+        return xdate.toDate();
+    }
+
     function addDays(date, days) {
         var xdate = new XDate(date);
         xdate.addDays(days);
@@ -28,6 +34,7 @@ define([
     }
 
     return {
+        toDate: toDate,
         addDays: addDays,
         getDay: getDay,
         toString: toString

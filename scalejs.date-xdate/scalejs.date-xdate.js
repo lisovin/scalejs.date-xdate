@@ -1,11 +1,13 @@
 /*global define*/
 define([
+    'scalejs!core',
     'scalejs.date-xdate/date'
 ], function (
+    core,
     date
 ) {
     'use strict';
 
-    return { date: date };
+    core.registerExtension({ date: date });
 });
 

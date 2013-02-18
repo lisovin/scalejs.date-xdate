@@ -10,7 +10,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Properties\build.rjs" />
-    <Content Include="Properties\scalejs.date-xdate.nuspec" />
+    <Content Include="Properties\scalejs.date-xdate.nuspec">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="scalejs.date-xdate.js" />
     <Content Include="scalejs.date-xdate\date.js" />
     <Content Include="Scripts\scalejs-0.1.13.js" />
