@@ -7,6 +7,12 @@ define('scalejs.date-xdate/date',[
 ) {
     
 
+    function toDate(date) {
+        var xdate = new XDate(date);
+
+        return xdate.toDate();
+    }
+
     function addDays(date, days) {
         var xdate = new XDate(date);
         xdate.addDays(days);
@@ -29,6 +35,7 @@ define('scalejs.date-xdate/date',[
     }
 
     return {
+        toDate: toDate,
         addDays: addDays,
         getDay: getDay,
         toString: toString
@@ -38,12 +45,14 @@ define('scalejs.date-xdate/date',[
 
 /*global define*/
 define('scalejs.date-xdate',[
+    'scalejs!core',
     'scalejs.date-xdate/date'
 ], function (
+    core,
     date
 ) {
     
 
-    return { date: date };
+    core.registerExtension({ date: date });
 });
 
